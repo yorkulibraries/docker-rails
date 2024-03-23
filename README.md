@@ -1,6 +1,6 @@
 # Purpose
 
-These templates help to quickly setup a Rails app or build new app using containers instead of setting up Rais environment on your desktop.
+These templates help to quickly setup a Rails app or build new app using containers instead of setting up Rails environment on your desktop.
 
 # Getting started
 Build starter containers.
