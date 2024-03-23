@@ -10,6 +10,7 @@ cd myapp
 wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/Dockerfile
 wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/docker-compose.yml
 wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/rt.sh
+touch Gemfile Gemfile.lock
 docker compose build
 ```
 
@@ -25,8 +26,21 @@ Inside the container, you can run any rails command as usual.
 rails help
 ```
 
-To run tests, use the "rt" script, it set RAILS_ENV=test and DATABASE_URL=db/test.sqlite3 so you don't have to type it in everytime. Sqlite is simplier and faster for running tests than Mysql.
+If developing new Rails app.
 
+```
+rails new . -f -d mysql
+bundle add sqlite3 --group "test"
+rails db:migrate
+```
+
+To run all tests, use the "rt" script, it set RAILS_ENV=test and DATABASE_URL=db/test.sqlite3 so you don't have to type it in everytime. Sqlite is simplier and faster for running tests than Mysql.
+
+```
+rt
+```
+
+If not in the running **web** container, you can run tests like below.
 ```
 docker compose run --rm web rt
 ```
