@@ -10,7 +10,6 @@ cd myapp
 wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/Dockerfile
 wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/docker-compose.yml
 wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/rt.sh
-touch Gemfile Gemfile.lock
 docker compose build
 ```
 
