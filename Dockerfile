@@ -8,7 +8,7 @@ ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
 
 ADD rt.sh /usr/local/bin/rt
-RUN sudo chmod a+x /usr/local/bin/rt
+RUN chmod a+x /usr/local/bin/rt
 
 RUN gem install rails -v '7.0.3.1'
 RUN bundle install
