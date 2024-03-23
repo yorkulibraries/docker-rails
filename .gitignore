@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!Dockerfile
+!docker-compose.yml
+!README.md
+!rt.sh
