@@ -30,3 +30,22 @@ To run tests, use the "rt" script, it set RAILS_ENV=test and DATABASE_URL=db/tes
 ```
 docker compose run --rm web rt
 ```
+
+## Finishing touch
+Finally, launch the app so it can be accessed at http://localhost:4004/
+
+```
+docker compose up --build
+```
+
+OR change the PORT environment if port 4004 is not available.
+
+```
+PORT=4005 docker compose up --build
+```
+
+OR run it in "production" mode
+```
+RAILS_ENV=production PORT=4005 docker compose up --build
+```
+
