@@ -34,18 +34,9 @@ bundle add sqlite3 --group "test"
 rails db:migrate
 ```
 
-To run all tests, use the "rt" script, it set RAILS_ENV=test and DATABASE_URL=db/test.sqlite3 so you don't have to type it in everytime. Sqlite is simplier and faster for running tests than Mysql.
+That's it. That is all you need to setup. Ctrl+D to exit the container.
 
-```
-rt
-```
-
-If not in the running **web** container, you can run tests like below.
-```
-docker compose run --rm web rt
-```
-
-## Finishing touch
+## Finishing up
 Finally, launch the app so it can be accessed at http://localhost:4004/
 
 ```
@@ -62,4 +53,26 @@ OR run it in "production" mode
 ```
 RAILS_ENV=production PORT=4005 docker compose up --build
 ```
+
+## Continue development
+
+While the app is running, you can attach to the running **web** container to make changes, run tests, see that it is reflected on the browser as nornal.
+
+```
+docker compose exec web bash
+```
+
+Generate a new controller.
+
+```
+rails generate controller Articles index --skip-routes
+```
+
+To run all tests, use the "rt" script, it set RAILS_ENV=test and DATABASE_URL=db/test.sqlite3 so you don't have to type it in everytime. Sqlite is simplier and faster for running tests than Mysql.
+
+```
+rt
+```
+
+And so on...
 
