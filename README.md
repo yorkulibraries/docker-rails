@@ -7,9 +7,9 @@ Build starter containers.
 
 ```
 cd myapp
-wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/Dockerfile
-wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/docker-compose.yml
-wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/rt.sh
+wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/Dockerfile
+wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/docker-compose.yml
+wget https://raw.githubusercontent.com/yorkulibraries/docker-rails/main/rt.sh
 docker compose build
 ```
 
