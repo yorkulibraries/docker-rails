@@ -36,7 +36,7 @@ Prepare database
 ```
 rails db:create
 rails db:migrate
-``
+```
 
 Also add sqlite3 so that we can run tests easily. 
 
