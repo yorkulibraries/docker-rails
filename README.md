@@ -30,8 +30,19 @@ If developing new Rails app.
 
 ```
 rails new . -f -d mysql
-bundle add sqlite3 --group "test"
 rails db:migrate
+```
+
+Also add sqlite3 so that we can run tests easily. 
+
+```
+bundle add sqlite3 --group "test"
+```
+
+Whether you are developing a new app or continuing an existing app. Run a full test suite to make sure all is well.
+
+```
+rt
 ```
 
 That's it. That is all you need to setup. Ctrl+D to exit the container.
