@@ -91,3 +91,7 @@ rt
 
 And so on...
 
+# Access mailcatcher web app
+
+http://localhost:4084/
+
