@@ -7,4 +7,5 @@
 !docker-compose.yml
 !README.md
 !rt.sh
+!rts.sh
 !.env
