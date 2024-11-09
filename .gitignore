@@ -1,11 +1,29 @@
-# Ignore everything
-*
+db/*.sqlite3
+db/*.sqlite3-journal
+log/*
+!log/.keep
+tmp/
+public/uploads/**/*
+MissingDrawer.tmplugin
+.sass-cache/
+.DS_Store
+.vagrant
+uploads/
+REVISION
+assets_manifest_backup/
+config/secrets.yml
+node_modules/
+public/assets/
+yarn.lock
+*.log
+.bundle
+lib/tasks/gem_records.txt
+app_settings.yml
+.byebug_history
+.rubocop.yml
+*.env
+*.bk
+.gitattributes
 
-# But not these files...
-!.gitignore
-!Dockerfile
-!docker-compose.yml
-!README.md
-!rt.sh
-!rts.sh
-!.env
+# Ignore master key for decrypting credentials and more.
+/config/master.key
